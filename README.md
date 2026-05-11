@@ -1,14 +1,15 @@
-# 🚀 AstroWind
+# 🚀 AstroWind (Astro 6 + Tailwind CSS 4 Fork)
 
 <img src="https://raw.githubusercontent.com/arthelokyo/.github/main/resources/astrowind/lighthouse-score.png" align="right"
      alt="AstroWind Lighthouse Score" width="100" height="358">
 
-🌟 _Most *starred* & *forked* Astro theme in 2022, 2023 & 2024_. 🌟
+> **Fork notice:** This is a fork of [AstroWind](https://github.com/arthelokyo/astrowind) by Arthelokyo, upgraded to **Astro 6** and **Tailwind CSS 4**.
 
-**AstroWind** is a free and open-source template to make your website using **[Astro 5.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/)**. Ready to start a new project and designed taking into account web best practices.
+**AstroWind** is a free and open-source template to make your website using **[Astro 6](https://astro.build/) + [Tailwind CSS 4](https://tailwindcss.com/)**. Ready to start a new project and designed taking into account web best practices.
 
+- ✅ **Astro 6** + **Tailwind CSS 4** — latest versions as of May 2026.
 - ✅ **Production-ready** scores in **PageSpeed Insights** reports.
-- ✅ Integration with **Tailwind CSS** supporting **Dark mode** and **_RTL_**.
+- ✅ Integration with **Tailwind CSS 4** supporting **Dark mode** and **_RTL_**.
 - ✅ **Fast and SEO friendly blog** with automatic **RSS feed**, **MDX** support, **Categories & Tags**, **Social Share**, ...
 - ✅ **Image Optimization** (using new **Astro Assets** and **Unpic** for Universal image CDN).
 - ✅ Generation of **project sitemap** based on your routes.
@@ -19,13 +20,13 @@
 
 ![AstroWind Theme Screenshot](https://raw.githubusercontent.com/arthelokyo/.github/main/resources/astrowind/screenshot-astrowind-1.0.png)
 
-[![arthelokyo](https://custom-icon-badges.demolab.com/badge/made%20by%20-arthelokyo-556bf2?style=flat-square&logo=arthelokyo&logoColor=white&labelColor=101827)](https://github.com/arthelokyo)
-[![License](https://img.shields.io/github/license/arthelokyo/astrowind?style=flat-square&color=dddddd&labelColor=000000)](https://github.com/arthelokyo/astrowind/blob/main/LICENSE.md)
-[![Maintained](https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg?style=flat-square)](https://github.com/arthelokyo)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/arthelokyo/astrowind#contributing)
-[![Known Vulnerabilities](https://snyk.io/test/github/arthelokyo/astrowind/badge.svg?style=flat-square)](https://snyk.io/test/github/arthelokyo/astrowind)
-[![Stars](https://img.shields.io/github/stars/arthelokyo/astrowind.svg?style=social&label=stars&maxAge=86400&color=ff69b4)](https://github.com/arthelokyo/astrowind)
-[![Forks](https://img.shields.io/github/forks/arthelokyo/astrowind.svg?style=social&label=forks&maxAge=86400&color=ff69b4)](https://github.com/arthelokyo/astrowind)
+[![hi100e](https://custom-icon-badges.demolab.com/badge/made%20by%20-hi100e-556bf2?style=flat-square&logo=github&logoColor=white&labelColor=101827)](https://github.com/hi100e)
+[![License](https://img.shields.io/github/license/hi100e/astrowind6?style=flat-square&color=dddddd&labelColor=000000)](https://github.com/hi100e/astrowind6/blob/main/LICENSE.md)
+[![Maintained](https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg?style=flat-square)](https://github.com/hi100e)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/hi100e/astrowind6#contributing)
+[![Known Vulnerabilities](https://snyk.io/test/github/hi100e/astrowind6/badge.svg?style=flat-square)](https://snyk.io/test/github/hi100e/astrowind6)
+[![Stars](https://img.shields.io/github/stars/hi100e/astrowind6.svg?style=social&label=stars&maxAge=86400&color=ff69b4)](https://github.com/hi100e/astrowind6)
+[![Forks](https://img.shields.io/github/forks/hi100e/astrowind6.svg?style=social&label=forks&maxAge=86400&color=ff69b4)](https://github.com/hi100e/astrowind6)
 
 <br>
 
@@ -33,7 +34,7 @@
 <summary>Table of Contents</summary>
 
 - [Demo](#demo)
-- [Upcoming: AstroWind 2.0 – We Need Your Vision!](#-upcoming-astrowind-20--we-need-your-vision)
+- [What's changed in this fork](#whats-changed-in-this-fork)
 - [TL;DR](#tldr)
 - [Getting started](#getting-started)
   - [Project structure](#project-structure)
@@ -54,25 +55,80 @@
 
 📌 [https://astrowind.vercel.app/](https://astrowind.vercel.app/)
 
+> **Note:** This demo is from the upstream project and runs the older Astro 5 version. It does not reflect this fork.
+
 <br>
 
-## 🔔 Upcoming: AstroWind 2.0 – We Need Your Vision!
+## What's changed in this fork
 
-We're embarking on an exciting journey with **AstroWind 2.0**, and we want you to be a part of it! We're currently taking the first steps in developing this new version and your insights are invaluable. Join the discussion and share your feedback, ideas, and suggestions to help shape the future of **AstroWind**. Let's make **AstroWind 2.0** even better, together!
+### Core upgrades
 
-[Share Your Feedback in Our Discussion!](https://github.com/arthelokyo/astrowind/discussions/392)
+| Package | Upstream | This fork |
+| :--- | :--- | :--- |
+| `astro` | ^5.x | **^6.3.1** |
+| `tailwindcss` | ^3.x | **^4.3.0** |
+| `@tailwindcss/vite` | — | **^4.3.0** (replaces `@astrojs/tailwind`) |
+| `@astrojs/mdx` | ^4.x | **^5.x** |
+| `tailwind-merge` | ^2.x | **^3.x** |
+| `astro-embed` | ^0.9.x | **^0.13.x** |
+| Node.js engines | `^18\|\|^20\|\|>=21` | **`^22.12.0`** |
+
+### Tailwind CSS 4 migration
+
+- `tailwind.config.js` **deleted** — all configuration moved to `src/assets/styles/tailwind.css` using CSS-native `@theme`, `@plugin`, `@custom-variant`, and `@utility` directives.
+- `@import "tailwindcss"` replaces the old `@tailwind base/components/utilities` directives.
+- Custom utilities (`btn`, `btn-primary`, `bg-page`, `text-muted`, etc.) rewritten as `@utility` blocks.
+- Dark mode and intersection observer variants defined via `@custom-variant`.
+
+### Astro 6 migration
+
+- `src/content/config.ts` **moved** to `src/content.config.ts` (Astro 6 requirement).
+- `z` import split from `astro:content` to `astro/zod` (Astro 6 deprecation).
+- Remote image domains (`images.unsplash.com`, `plus.unsplash.com`) added to `astro.config.ts` `image.domains` (Astro 6 is stricter).
+- `tsconfig.json` — removed deprecated `baseUrl`; `paths` now uses `./src/*`.
+
+### Dependency clean-up
+
+- `@astrolib/analytics` **removed** — Google Analytics inlined directly in `Analytics.astro`.
+- `npm overrides` added for `astro-icon` and `@astrolib/seo` so `npm install` works without `--legacy-peer-deps`.
+
+### Configuration
+
+- New `announcement` block in `src/config.yaml` — controls the top banner with `isEnabled`, `label`, `text`, `href`, and `isTargetBlank`. No more hardcoded content in `Announcement.astro`.
 
 <br>
 
 ## TL;DR
 
 ```shell
-npm create astro@latest -- --template arthelokyo/astrowind
+npm create astro@latest -- --template hi100e/astrowind6
 ```
+
+> The upstream template (Astro 5, older) is available at `npm create astro@latest -- --template arthelokyo/astrowind`.
+
+### Dependency notes
+
+Two upstream packages (`astro-icon`, `@astrolib/seo`) have stale `peerDependencies` that predate Astro 6. This fork handles both cleanly:
+
+- **`@astrolib/analytics`** — removed entirely. Google Analytics is now inlined directly in `src/components/common/Analytics.astro` (no external dependency).
+- **`astro-icon`** and **`@astrolib/seo`** — kept as-is (work at runtime). A `package.json` `overrides` entry tells npm that Astro 6 satisfies their peerDeps, so `npm install` works without `--legacy-peer-deps`.
+
+#### Cloudflare Workers / Cloudflare adapter
+
+If you deploy using the `@astrojs/cloudflare` adapter, `astro-icon` has a known runtime issue ([#277](https://github.com/natemoo-re/astro-icon/issues/277)): its transitive deps `@iconify/utils@2.x` and `@iconify/tools@4.x` import the `debug` package as CJS, which breaks the Cloudflare Workers runtime. Add these extra overrides to `package.json` to fix it:
+
+```json
+"overrides": {
+  "@iconify/tools": "5.0.5",
+  "@iconify/utils": "3.1.0"
+}
+```
+
+This is not needed for static or Node.js deployments (Netlify, Vercel static, etc.).
 
 ## Getting started
 
-**AstroWind** tries to give you quick access to creating a website using [Astro 5.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/). It's a free theme which focuses on simplicity, good practices and high performance.
+**AstroWind** tries to give you quick access to creating a website using [Astro 6](https://astro.build/) + [Tailwind CSS 4](https://tailwindcss.com/). It's a free theme which focuses on simplicity, good practices and high performance.
 
 Very little vanilla javascript is used only to provide basic functionality so that each developer decides which framework (React, Vue, Svelte, Solid JS...) to use and how to approach their goals.
 
@@ -108,7 +164,7 @@ Inside **AstroWind** template, you'll see the following folders and files:
 │   │   │   ├── post-slug-1.md
 │   │   │   ├── post-slug-2.mdx
 │   │   │   └── ...
-│   │   └-- config.ts
+│   │   └-- config.ts  (now at src/content.config.ts in Astro 6)
 │   ├── layouts/
 │   │   ├── Layout.astro
 │   │   ├── MarkdownLayout.astro
@@ -137,7 +193,7 @@ There's nothing special about `src/components/`, but that's where we like to put
 
 Any static assets, like images, can be placed in the `public/` directory if they do not require any transformation or in the `assets/` directory if they are imported directly.
 
-[![Edit AstroWind on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/arthelokyo/astrowind/tree/main) [![Open in Gitpod](https://svgshare.com/i/xdi.svg)](https://gitpod.io/?on=gitpod#https://github.com/arthelokyo/astrowind) [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/arthelokyo/astrowind)
+[![Edit AstroWind on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/hi100e/astrowind6/tree/main) [![Open in Gitpod](https://svgshare.com/i/xdi.svg)](https://gitpod.io/?on=gitpod#https://github.com/hi100e/astrowind6) [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/hi100e/astrowind6)
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file `README.md`. Update `src/config.yaml` and contents. Have fun!
 
@@ -244,8 +300,8 @@ ui:
 
 To customize Font families, Colors or more Elements refer to the following files:
 
-- `src/components/CustomStyles.astro`
-- `src/assets/styles/tailwind.css`
+- `src/components/CustomStyles.astro` — CSS custom properties (`--aw-color-*`, `--aw-font-*`)
+- `src/assets/styles/tailwind.css` — Tailwind CSS 4 `@theme` block (colors, fonts, animations)
 
 ### Deploy
 
@@ -265,13 +321,13 @@ prefer.
 
 Clone this repository on your own GitHub account and deploy it to Netlify:
 
-[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/arthelokyo/astrowind)
+[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/hi100e/astrowind6)
 
 #### Deploy to Vercel
 
 Clone this repository on your own GitHub account and deploy to Vercel:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Farthelokyo%2Fastrowind)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhi100e%2Fastrowind6)
 
 <br>
 
@@ -295,7 +351,9 @@ That would be very useful for all of us and we would be happy to listen and take
 
 ## Acknowledgements
 
-Initially created by **Arthelokyo** and maintained by a community of [contributors](https://github.com/arthelokyo/astrowind/graphs/contributors).
+Originally created by **Arthelokyo** and maintained by a community of [contributors](https://github.com/arthelokyo/astrowind/graphs/contributors).
+
+This fork upgrades the template to Astro 6 + Tailwind CSS 4. Upstream repo: [arthelokyo/astrowind](https://github.com/arthelokyo/astrowind).
 
 ## License
 

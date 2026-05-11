@@ -70,3 +70,10 @@ analytics:
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+
+announcement:
+  isEnabled: true
+  label: 'NEW' # Optional badge label. Remove or leave empty to hide the badge.
+  text: 'Astro 6 + Tailwind CSS 4 fork is now available!'
+  href: 'https://github.com/hi100e/astrowind6'
+  isTargetBlank: true

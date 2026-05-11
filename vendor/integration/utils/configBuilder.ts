@@ -82,6 +82,14 @@ export interface UIConfig {
   theme: string;
 }
 
+export interface AnnouncementConfig {
+  isEnabled: boolean;
+  label?: string;
+  text: string;
+  href: string;
+  isTargetBlank?: boolean;
+}
+
 const DEFAULT_SITE_NAME = 'Website';
 
 const getSite = (config: Config) => {
@@ -193,6 +201,18 @@ const getAnalytics = (config: Config) => {
   return merge({}, _default, config?.analytics ?? {}) as AnalyticsConfig;
 };
 
+const getAnnouncement = (config: Config) => {
+  const _default: AnnouncementConfig = {
+    isEnabled: false,
+    label: undefined,
+    text: '',
+    href: '/',
+    isTargetBlank: false,
+  };
+
+  return merge({}, _default, (config as { announcement?: AnnouncementConfig })?.announcement ?? {}) as AnnouncementConfig;
+};
+
 export default (config: Config) => ({
   SITE: getSite(config),
   I18N: getI18N(config),
@@ -200,4 +220,5 @@ export default (config: Config) => ({
   APP_BLOG: getAppBlog(config),
   UI: getUI(config),
   ANALYTICS: getAnalytics(config),
+  ANNOUNCEMENT: getAnnouncement(config),
 });
