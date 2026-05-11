@@ -29,8 +29,8 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}): AstroIntegra
         const { SITE, I18N, METADATA, APP_BLOG, UI, ANALYTICS, ANNOUNCEMENT } = configBuilder(rawJsonConfig);
 
         updateConfig({
-          site: SITE.site,
-          base: SITE.base,
+          site: process.env.SITE || SITE.site,
+          base: process.env.BASE_PATH || SITE.base,
 
           trailingSlash: SITE.trailingSlash ? 'always' : 'never',
 
