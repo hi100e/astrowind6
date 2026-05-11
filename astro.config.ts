@@ -23,6 +23,8 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 
 export default defineConfig({
   output: 'static',
+  site: process.env.SITE,
+  base: process.env.BASE_PATH,
 
   integrations: [
     sitemap(),
