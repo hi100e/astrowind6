@@ -20,13 +20,13 @@
 
 ![AstroWind Theme Screenshot](https://raw.githubusercontent.com/arthelokyo/.github/main/resources/astrowind/screenshot-astrowind-1.0.png)
 
-[![arthelokyo](https://custom-icon-badges.demolab.com/badge/made%20by%20-arthelokyo-556bf2?style=flat-square&logo=arthelokyo&logoColor=white&labelColor=101827)](https://github.com/arthelokyo)
-[![License](https://img.shields.io/github/license/arthelokyo/astrowind?style=flat-square&color=dddddd&labelColor=000000)](https://github.com/arthelokyo/astrowind/blob/main/LICENSE.md)
-[![Maintained](https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg?style=flat-square)](https://github.com/arthelokyo)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/arthelokyo/astrowind#contributing)
-[![Known Vulnerabilities](https://snyk.io/test/github/arthelokyo/astrowind/badge.svg?style=flat-square)](https://snyk.io/test/github/arthelokyo/astrowind)
-[![Stars](https://img.shields.io/github/stars/arthelokyo/astrowind.svg?style=social&label=stars&maxAge=86400&color=ff69b4)](https://github.com/arthelokyo/astrowind)
-[![Forks](https://img.shields.io/github/forks/arthelokyo/astrowind.svg?style=social&label=forks&maxAge=86400&color=ff69b4)](https://github.com/arthelokyo/astrowind)
+[![hi100e](https://custom-icon-badges.demolab.com/badge/made%20by%20-hi100e-556bf2?style=flat-square&logo=github&logoColor=white&labelColor=101827)](https://github.com/hi100e)
+[![License](https://img.shields.io/github/license/hi100e/astrowind6?style=flat-square&color=dddddd&labelColor=000000)](https://github.com/hi100e/astrowind6/blob/main/LICENSE.md)
+[![Maintained](https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg?style=flat-square)](https://github.com/hi100e)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/hi100e/astrowind6#contributing)
+[![Known Vulnerabilities](https://snyk.io/test/github/hi100e/astrowind6/badge.svg?style=flat-square)](https://snyk.io/test/github/hi100e/astrowind6)
+[![Stars](https://img.shields.io/github/stars/hi100e/astrowind6.svg?style=social&label=stars&maxAge=86400&color=ff69b4)](https://github.com/hi100e/astrowind6)
+[![Forks](https://img.shields.io/github/forks/hi100e/astrowind6.svg?style=social&label=forks&maxAge=86400&color=ff69b4)](https://github.com/hi100e/astrowind6)
 
 <br>
 
@@ -34,6 +34,7 @@
 <summary>Table of Contents</summary>
 
 - [Demo](#demo)
+- [What's changed in this fork](#whats-changed-in-this-fork)
 - [TL;DR](#tldr)
 - [Getting started](#getting-started)
   - [Project structure](#project-structure)
@@ -57,6 +58,43 @@
 > **Note:** This demo is from the upstream project and runs the older Astro 5 version. It does not reflect this fork.
 
 <br>
+
+## What's changed in this fork
+
+### Core upgrades
+
+| Package | Upstream | This fork |
+| :--- | :--- | :--- |
+| `astro` | ^5.x | **^6.3.1** |
+| `tailwindcss` | ^3.x | **^4.3.0** |
+| `@tailwindcss/vite` | — | **^4.3.0** (replaces `@astrojs/tailwind`) |
+| `@astrojs/mdx` | ^4.x | **^5.x** |
+| `tailwind-merge` | ^2.x | **^3.x** |
+| `astro-embed` | ^0.9.x | **^0.13.x** |
+| Node.js engines | `^18\|\|^20\|\|>=21` | **`^22.12.0`** |
+
+### Tailwind CSS 4 migration
+
+- `tailwind.config.js` **deleted** — all configuration moved to `src/assets/styles/tailwind.css` using CSS-native `@theme`, `@plugin`, `@custom-variant`, and `@utility` directives.
+- `@import "tailwindcss"` replaces the old `@tailwind base/components/utilities` directives.
+- Custom utilities (`btn`, `btn-primary`, `bg-page`, `text-muted`, etc.) rewritten as `@utility` blocks.
+- Dark mode and intersection observer variants defined via `@custom-variant`.
+
+### Astro 6 migration
+
+- `src/content/config.ts` **moved** to `src/content.config.ts` (Astro 6 requirement).
+- `z` import split from `astro:content` to `astro/zod` (Astro 6 deprecation).
+- Remote image domains (`images.unsplash.com`, `plus.unsplash.com`) added to `astro.config.ts` `image.domains` (Astro 6 is stricter).
+- `tsconfig.json` — removed deprecated `baseUrl`; `paths` now uses `./src/*`.
+
+### Dependency clean-up
+
+- `@astrolib/analytics` **removed** — Google Analytics inlined directly in `Analytics.astro`.
+- `npm overrides` added for `astro-icon` and `@astrolib/seo` so `npm install` works without `--legacy-peer-deps`.
+
+### Configuration
+
+- New `announcement` block in `src/config.yaml` — controls the top banner with `isEnabled`, `label`, `text`, `href`, and `isTargetBlank`. No more hardcoded content in `Announcement.astro`.
 
 <br>
 
@@ -155,7 +193,7 @@ There's nothing special about `src/components/`, but that's where we like to put
 
 Any static assets, like images, can be placed in the `public/` directory if they do not require any transformation or in the `assets/` directory if they are imported directly.
 
-[![Edit AstroWind on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/arthelokyo/astrowind/tree/main) [![Open in Gitpod](https://svgshare.com/i/xdi.svg)](https://gitpod.io/?on=gitpod#https://github.com/arthelokyo/astrowind) [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/arthelokyo/astrowind)
+[![Edit AstroWind on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/hi100e/astrowind6/tree/main) [![Open in Gitpod](https://svgshare.com/i/xdi.svg)](https://gitpod.io/?on=gitpod#https://github.com/hi100e/astrowind6) [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/hi100e/astrowind6)
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file `README.md`. Update `src/config.yaml` and contents. Have fun!
 
@@ -283,13 +321,13 @@ prefer.
 
 Clone this repository on your own GitHub account and deploy it to Netlify:
 
-[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/arthelokyo/astrowind)
+[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/hi100e/astrowind6)
 
 #### Deploy to Vercel
 
 Clone this repository on your own GitHub account and deploy to Vercel:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Farthelokyo%2Fastrowind)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhi100e%2Fastrowind6)
 
 <br>
 
